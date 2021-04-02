@@ -2,6 +2,7 @@
 
 body {
   @body-copy();
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,4 +23,136 @@ h3 {
 
 h4, h5, h6 {
   font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  align-items: center;
+  background-color: @primary-color-2;
+  @headings();
+  .header-logo {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+  }
+  .header-small-logo {
+    display: none;
+  }
+  .header-navigation {
+    width: 100%;
+    .header-register {
+      height: 115px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .register-spacing {
+        width: 150px;
+      }
+      .header-register-button {
+        background-color: @primary-color-1;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        height: 30px;
+        cursor: pointer;
+      }
+    }
+    .header-pages {
+      height: 85px;
+      display: flex;
+      justify-content: space-around;
+      background-color: @secondary-color-1;
+      color: white;
+      .header-link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 740px)  {
+  .header {
+    height: 130px;
+    .header-logo {
+      display: none;
+    }
+    .header-small-logo {
+      display: flex;
+      justify-content: center;
+      width: 150px;
+    }
+    .header-navigation {
+      .header-register {
+        height: 70px;
+        .register-spacing {
+          width: 60px;
+        }
+        .header-register-button {
+          padding: 10px 25px;
+          height: 25px;
+        }
+      }
+      .header-pages {
+        height: 60px;
+      }
+    }
+  }
+}
+
+.footer {
+  a {
+    cursor: pointer;
+  }
+  height: 250px;
+  width: 100%;
+  background-color: @primary-color-2;
+  @headings();
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  div.footer-link {
+    text-align: right;
+  }
+  .footer-link {
+    height: 120px;
+    .footer-contact {
+      @body-copy();
+      text-align: right;
+      padding: 2px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 740px)  {
+  .footer {
+    height: 300px;
+    flex-direction: column;
+    align-items: center;
+    a.footer-link {
+      padding-top: 12px;
+    }
+    div.footer-link {
+      padding: 12px 0 20px 0;
+      text-align: center;
+    }
+    .footer-link {
+      height: 180px;
+      .footer-contact {
+        text-align: center;
+      }
+    }
+  }
 }
