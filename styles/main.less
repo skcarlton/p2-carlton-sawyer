@@ -156,3 +156,99 @@ a {
     }
   }
 }
+
+.about-content {
+  margin: 50px 80px;
+  h2 {
+    padding-top: 30px;
+  }
+}
+
+.programs-content {
+  margin: 50px 80px;
+  .collapsible {
+    background-color: @primary-color-2;
+    color: @secondary-color-1;
+    @headings();
+    cursor: pointer;
+    padding: 18px;
+    margin-top: 50px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    display: flex;
+  }
+
+  .active, .collapsible:hover {
+    background-color: @primary-color-1;
+  }
+
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+  }
+
+  h1 {
+    padding-bottom: 20px;
+  }
+}
+
+.weather-button {
+  background-color: @secondary-color-1;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.home-content {
+  .hero-image-container {
+    height: 450px;
+  }
+  .hero-image {
+    background-image: url("../images/home-banner.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .home-body {
+    margin: 50px 80px;
+    .home-headings {
+      text-align: center;
+    }
+    .home-cards {
+      padding: 40px 0 10px 0;
+      display: flex;
+      justify-content: space-around;
+      .home-card {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 820px)  {
+  .hero-image-container {
+    height: 300px;
+  }
+  .home-body {
+    .home-cards {
+      padding: 30px 0 30px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .home-card {
+        text-align: center;
+      }
+    }
+  }
+}
