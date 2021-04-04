@@ -61,7 +61,9 @@ if (id[1]) {
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 setTimeout(() => {
-    modal.style.display = "block";
+    if (modal) {
+        modal.style.display = "block";
+    }
 }, 10000);
 if (span) {
     span.onclick = function() {
